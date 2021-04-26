@@ -12,7 +12,6 @@ public class Aufgabe6c {
         System.out.println("x :" + x);
         System.out.println("is infinite : " + Double.isInfinite(x));
         System.out.println("is NaN: " + Double.isNaN(x));
-        System.out.println("is normalized: " + Double.);
 
     }
 }
