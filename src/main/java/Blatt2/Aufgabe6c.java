@@ -13,5 +13,10 @@ public class Aufgabe6c {
         System.out.println("is infinite : " + Double.isInfinite(x));
         System.out.println("is NaN: " + Double.isNaN(x));
 
+        Double d = x;
+        System.out.println("d as double: " +  d.doubleValue());
+        Double e = 1 / x;
+        System.out.println("e as int: " + e.intValue());
+
     }
 }
