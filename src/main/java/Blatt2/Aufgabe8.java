@@ -13,6 +13,7 @@ public class Aufgabe8 {
         myMatrixPrint(myMatrixTranspose(matrix));
     }
 
+
     private static double[][] myMatrixRandom(int x, int y) {
         int i, j;
         double[][] matrix = new double[x][y];
@@ -21,6 +22,7 @@ public class Aufgabe8 {
                 matrix[i][j] = Math.random() * Double.MAX_VALUE;  // add random double number to each matrix-entry
             }
         }
+
         return matrix;
     }
 
