@@ -51,11 +51,8 @@ public class Aufgabe8 {
     private static double[][] myMatrixTranspose(double[][] matrix){
         int i, j;
         double[][] newMatrix = new double[matrix[0].length][matrix.length];
-        for(i = 0; i < matrix.length; i++){
-            for(j = 0; j < matrix[0].length; j++){
-                newMatrix[j][i] = matrix[i][j];
-            }
-
+        for(i = 0; i < matrix.length; i++){     //transpose: newMatrix[j][i] = oldMatrix[i][j]
+            for(j = 0; j < matrix[0].length; j++) newMatrix[j][i] = matrix[i][j];
         }
         return newMatrix;
     }
