@@ -6,11 +6,6 @@ public class Aufgabe1a {
     //Aufgabe1 a: erstellt eine zufällige ganze zahl n (zwischen 0 und 100) und gibt alle Primzahlen bis n aus
 
     public static void main(String[] args) {
-        primzahlen();
-
-    }
-
-    private static void primzahlen() {
         int n, i;
         Random rand = new Random();
         n = rand.nextInt(101);
@@ -27,7 +22,7 @@ public class Aufgabe1a {
                 System.out.println(i);
             }
         }
+
+
     }
-
-
 }
