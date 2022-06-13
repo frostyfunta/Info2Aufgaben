@@ -22,3 +22,4 @@ public class Aufgabe17b {
         System.out.println("the highest priority is: " + priorityStream.min().getAsInt());
     }
 }
+
