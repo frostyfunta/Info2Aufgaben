@@ -1,8 +1,9 @@
 package S22_b5;
 
 import javax.swing.*;
-import java.awt.*;
-
+import java.awt.Font;
+import java.awt.Color;
+import java.awt.BorderLayout;
 
 public class Aufgabe21a extends JFrame {
     public static void main(String[] args) {
