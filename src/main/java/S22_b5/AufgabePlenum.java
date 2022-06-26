@@ -1,7 +1,5 @@
 package S22_b5;
 
-import com.sun.source.tree.LambdaExpressionTree;
-import com.sun.tools.javac.comp.Flow;
 
 import javax.swing.*;
 import java.awt.*;

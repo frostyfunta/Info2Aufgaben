@@ -2,68 +2,55 @@ package S22_b6;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ItemEvent;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
-import java.awt.event.MouseMotionListener;
+import java.awt.event.*;
 
-public class Aufgabe26a extends JFrame {
+public class Aufgabe26a_old extends JPanel implements MouseListener,MouseMotionListener{
     boolean isChecked = false;
-    Aufgabe26a() {
-        super("Aufgabe26a");
-        //checkbox
+    Point point = null;
+
+    public Aufgabe26a_old(){
+        //super("KreisFrame");
         JCheckBox cb = new JCheckBox();
+
+        //checkbox
         cb.addItemListener(itemEvent -> {
-            if (itemEvent.getStateChange() == ItemEvent.SELECTED) {
+            if(itemEvent.getStateChange() == ItemEvent.SELECTED){
                 System.out.println("checked");
                 isChecked = true;
-            } else {
+            }else{
                 System.out.println("unchecked");
                 isChecked = false;
             }
         });
 
+        //Draw when mouse is clicked && isChecked = true
+
+
         //add components and create window
-        setSize(300,300);
-        add(new drawPanel());
+        addMouseListener(this);
         add(cb, BorderLayout.NORTH);
+        setSize(300, 300);
         setVisible(true);
-        setDefaultCloseOperation(3);
-
-
+        //setDefaultCloseOperation(3);
     }
+
 
     public static void main(String[] args) {
-        new Aufgabe26a();
+        new Aufgabe26a_old();
     }
 
-}
-
-class drawPanel extends JPanel implements MouseListener, MouseMotionListener {
-    Point mousePosition;
-
-    drawPanel() {
+    public void drawCircle(int x, int y){
         Graphics g = this.getGraphics();
-        addMouseListener(this);
-    }
-
-    public void mouseCircle(Graphics g, Point mouseCursor){
-        
-        repaint();
     }
 
     @Override
     public void mouseClicked(MouseEvent e) {
-        System.out.println("mouse has been clicked");
-        mouseCircle(this.getGraphics(), e.getPoint());
-        repaint();
+
     }
-
-
 
     @Override
     public void mousePressed(MouseEvent e) {
-
+        System.out.println("pressed x:" + e.getX() + " y:" + e.getY());
     }
 
     @Override
@@ -88,7 +75,6 @@ class drawPanel extends JPanel implements MouseListener, MouseMotionListener {
 
     @Override
     public void mouseMoved(MouseEvent e) {
-
+        System.out.println(e.getPoint().toString());
     }
 }
-
