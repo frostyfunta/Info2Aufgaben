@@ -1,0 +1,46 @@
+Aufgabe 44a
+
+Das abgebildete UML-Klassendiagramm erfüllt NICHT das SRP.
+
+Es gibt mehrere Attribute, die man zu einem zusammenfassen könnte (was für eine Art Möbel es ist - Sitzbank oder Lampe -
+könnte man als String abspeichern)
+Es gibt Attribute, die Irrelevant sind, falls das Möbelstück zum Beispiel eine Sitzbank ist
+(die Leuchtstärke fällt dann weg).
+Die Klasse ist also Verantwortlich dafür zu zeigen was für ein Möbelstück das Objekt ist und je nachdem dann die Höhe
+ODER die Leuchtstärke festlegt - also erfüllt sie das SRP nicht
+
+
+Aufgabe 44b
+
+Der abgebildete Code erfüllt das OCP NICHT.
+
+Da jedes Produkt eine eigene ArrayList hat, kann man das Sortiment nicht einfach um ein weiteres Attribut erweitern,
+da das die berechneInventar Funktion danach auch ändern müsste.
+
+Lösungsvorschlag:
+Eine abstrakte Klasse erstellen, die alle zu verleihenden Produkte erben können.
+Dann wird nur eine ArrayList - private ArrayList<Produkt> produkte; erstellt, und um das Inventar zu berechnen,
+genügt es die Länge der Liste zurückzugeben, statt die einzelnen Produkte mithilfe einer weiteren Variable zusammenzuzählen.
+
+
+Aufgabe 44c
+
+Ein Objekt der Klasse Fahrer verhält sich genau so wie ein Objekt der Klasse Person, solange
+es keine Methode gibt(in der Klasse Person), die das Alter auf <18 setzt oder verlangt, dass das Alter unter 18 ist.
+
+Also erfüllt der Code das LSP.
+
+
+Aufgabe 44d
+
+Die Ereignisbehandlung in der Java-API ist erfülllt das DIP indem es an der "obersten" Schicht ein EventListener-interface
+hat und je nachdem was für eine Art Ereignis man abhören will, gibt es weitere Ereignishörer, die alle
+das EventListener-interface erweitern.
+Man kann die "unteren" Hörer verändern, ohne dabei die Funktionalität des EventListeners selber zu verändern.
+
+
+Aufgabe 44e
+
+Das abegbildete UML-Klassendiagramm verletzt das ISP, da das Interface Tier methoden besitzt, die nicht relevant
+für alle Unterklassen sind.
+z.B. eine Maus fliegt nicht oder eine Taube schwimmt nicht.

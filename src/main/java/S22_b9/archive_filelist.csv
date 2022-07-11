@@ -1,0 +1,7 @@
+﻿Name;Size;"First name";"Last name";Downloads;Date;Path
+Bibliothek.java;1543;"Julian Frederik";Linne;31;"29.06.2022 16:36";bibliothek/data/Bibliothek.java
+Buch.java;2238;"Julian Frederik";Linne;27;"29.06.2022 16:36";bibliothek/data/Buch.java
+IllegalLoanException.java;169;"Julian Frederik";Linne;28;"29.06.2022 16:36";bibliothek/data/IllegalLoanException.java
+AddBook.java;1522;"Julian Frederik";Linne;29;"29.06.2022 16:36";bibliothek/gui/AddBook.java
+BibliothekGUI.java;3208;"Julian Frederik";Linne;31;"29.06.2022 16:36";bibliothek/gui/BibliothekGUI.java
+ShowBooks.java;1589;"Julian Frederik";Linne;30;"29.06.2022 16:36";bibliothek/gui/ShowBooks.java
