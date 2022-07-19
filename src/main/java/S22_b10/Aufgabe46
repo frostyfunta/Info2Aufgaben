@@ -1,0 +1,46 @@
+Aufgabe 46a
+
+create table Künstler
+{
+    Name    varchar(20)
+    Birthday date
+    primary key(Name)
+}
+
+
+
+
+Aufgabe 46b
+create table Film
+{
+    Titel   varchar(20)
+    Regisseur varchar(30)
+    Jahr integer
+    Schauspieler varchar
+    check(Jahr >= 1895)
+    primary key(Titel)
+
+}
+
+
+
+
+Aufgabe 46c
+create table Warenkorb
+{
+    Artikelnummer char(10) UNIQUE
+    Bestellnr integer
+    Bestellmenge integer
+    Preis float
+    check(float > 0)
+    check(Bestellmenge > 0)
+    foreign key(Bestellnr) references Bestellung(Bestellnr)
+}
+
+create table Bestellung
+{
+    Bestellnr integer UNIQUE
+    Bezahlungsart varchar
+    check(Bezahlungsart in 'PayPal', 'Lastschrift')
+    primary key Bestellnr
+}

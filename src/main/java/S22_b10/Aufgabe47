@@ -1,0 +1,31 @@
+Aufgabe47a
+
+delete from Spieler
+where nummer < 10;
+
+select name
+from Spieler
+where teamID = (select ID
+                from Mannschaft
+                where name = 'HCAugsburg');
+
+
+Aufgabe47b
+
+select distinct name
+from Zoowaerter
+where personalNummer = (select id
+                        from Fuetterung
+                        where oeffentlich = 1 and tierId = (select id
+                                                            from Tier
+                                                            where art = 'Gepard'));
+
+
+Aufgabe47c
+
+insert into Point(5, 3, 2);
+
+update Rectangle
+set height = height*2
+where id = 7;
+
